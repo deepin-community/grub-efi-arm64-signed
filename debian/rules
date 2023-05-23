@@ -1,4 +1,19 @@
 #!/usr/bin/make -f
 
+SIG_DIR := debian/signatures/grub-efi-arm64-bin
+
 %:
 	dh $@
+
+override_dh_auto_install:
+	set -e ; \
+	find "$(SIG_DIR)" -name '*.efi.signed' -printf '%P\n' | \
+	while read sig; do \
+		dst="debian/tmp/$${sig%/monolithic/*}-signed/" ; \
+		echo "$$dst" ; \
+		echo "$${sig%}" ; \
+		install -m 0755 -d "$${dst%/*}" ; \
+		install -m 0644 "debian/signatures/grub-efi-arm64-bin/$${sig%}" "$$dst" ; \
+	done
+override_dh_install:
+	dh_install --sourcedir=debian/tmp .

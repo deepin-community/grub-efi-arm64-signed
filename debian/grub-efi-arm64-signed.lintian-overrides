@@ -1,0 +1,1 @@
+grub-efi-arm64-signed: portable-executable-missing-security-features usr/lib/grub/arm64-efi-signed/grub* ASLR DEP/NX
