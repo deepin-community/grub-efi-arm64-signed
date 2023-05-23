@@ -1,5 +1,61 @@
-template-repository (1.0-1) unstable; urgency=medium
+grub-efi-arm64-signed (1+2.04.16+1-dde) unstable; urgency=medium
 
-  * Initial release
+  * do not print "welcome to grub"
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- zhouzilong <zhouzilong@uniontech.com>  Wed, 09 Mar 2022 16:26:19 +0800
+
+grub-efi-arm64-signed (1+2.04.3+5+dde) unstable; urgency=medium
+
+  * update grub.efi, for pro1050.
+
+ -- zhouzilong <zhouzilong@uniontech.com>  Tue, 26 Oct 2021 21:42:53 +0800
+
+grub-efi-arm64-signed (1+2.04.3+4+dde) unstable; urgency=medium
+
+  * update grub.efi.
+
+ -- deepin <lichenggang@uniontech.com>  Mon, 16 Aug 2021 11:16:53 +0800
+
+grub-efi-arm64-signed (1+2.04.3+3+dde) unstable; urgency=medium
+
+  * update grub.efi.
+
+ -- deepin <lichenggang@uniontech.com>  Fri, 06 Aug 2021 13:49:19 +0800
+
+grub-efi-arm64-signed (1+2.04.3+2+dde) unstable; urgency=medium
+
+  * add grub.efi.
+
+ -- deepin <lichenggang@uniontech.com>  Mon, 26 Jul 2021 09:16:27 +0800
+
+grub-efi-arm64-signed (1+2.04.3+1+dde) unstable; urgency=medium
+
+  * add uniontech efibootmag.
+
+ -- deepin <lichenggang@uniontech.com>  Wed, 21 Jul 2021 17:00:01 +0800
+
+grub-efi-arm64-signed (1+2.04.2+1+dde) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * 
+
+ -- deepin <lichenggang@uniontech.com>  Mon, 19 Jul 2021 13:08:38 +0800
+
+grub-efi-arm64-signed (1+2.04.1+1+dde) unstable; urgency=medium
+
+  * update add grub install boot.
+
+ -- deepin <lichenggang@uniontech.com>  Mon, 12 Jul 2021 20:44:24 +0800
+
+grub-efi-arm64-signed (1+2.04+1+dde) unstable; urgency=medium
+
+  * update changelog.
+
+ -- deepin <lichenggang@uniontech.com>  Mon, 05 Jul 2021 15:46:04 +0800
+
+grub-efi-arm64-signed (1+2.04+dde) unstable; urgency=medium
+
+  * install grub.efi.
+
+ -- deepin <lichenggang@uniontech.com>  Sat, 03 Jul 2021 16:45:21 +0800
+

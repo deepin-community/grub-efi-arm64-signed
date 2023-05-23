@@ -1,0 +1,28 @@
+#! /bin/sh
+set -e
+install_grub_efi ()
+{
+        bootloader=`ls /boot/efi/EFI -l | awk '{print $9}'`
+	for i in $bootloader ; do
+        	if [ -e "/boot/efi/EFI/$i" ]; then
+                	grub-install  --bootloader-id=$i
+        	fi
+	done
+	if [ -e "/usr/lib/shim/shimaa64.efi.signed" ]&&[ -e "/boot/efi/EFI" ] ; then
+                cp /usr/lib/shim/shimaa64.efi.signed /boot/efi/EFI/boot/bootaa64.efi
+                cp /usr/lib/grub/arm64-efi-signed/grubaa64.efi.signed /boot/efi/EFI/boot/grubaa64.efi
+        fi
+
+}
+
+
+case $1 in
+    configure)
+        install_grub_efi 
+	;;
+esac
+
+
+
+exit 0
+
