@@ -1,3 +1,9 @@
+grub-efi-arm64-signed (1+2.12+deepin) unstable; urgency=medium
+
+  * update grub 2.12 efi.
+
+ -- LiChengGang <lichenggang@uniontech.com>  Wed, 27 Mar 2024 13:52:18 +0800
+
 grub-efi-arm64-signed (1+2.04.16+2-deepin) unstable; urgency=medium
 
   * update changelog.
