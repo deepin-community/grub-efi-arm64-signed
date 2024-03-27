@@ -2,7 +2,7 @@
 set -e
 install_grub_efi ()
 {
-        bootloader=`ls /boot/efi/EFI -l | awk '{print $9}'`
+        bootloader=`find /boot/efi/EFI/ -mindepth 1 -maxdepth 1 -type d | awk -F'/' '{print $5}'`
 	for i in $bootloader ; do
         	if [ -e "/boot/efi/EFI/$i" ]; then
                 	grub-install  --bootloader-id=$i
