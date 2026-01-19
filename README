@@ -9,8 +9,12 @@
     +-> base version
 
 2. Modules needed to make efi：
-  1> $ echo "shim.uos,1,Uos,shim,15.4-1,mail:secureboot@uniontech.com" > sbat
-  2> $ grub-mkimage -O arm64-efi -d ./arm64-efi/ -o grubaa64.efi.unsigned -p /EFI/boot --format 'arm64-efi' --compression  auto  ext2  part_gpt newc blocklist iso9660 udf memdisk cpio minicmd part_msdos part_gpt msdospart fat ntfs exfat loopback   gfxterm reboot normal romfs procfs sleep ls cat echo search configfile halt chain  test probe linux  scsi  gfxmenu gfxterm gfxterm_background deepin_gfxmode linux jpeg iso9660  elf   part_apple ext2 extcmd xfs part_bsd part_gpt search   search_fs_file chain btrfs loadenv lvm minix minix2 reiserfs png part_gpt gzio  part_gpt all_video efifwsetup password_pbkdf2 --sbat sbat
+  1> $ echo 'sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,6,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
+grub.debian,5,Debian,grub2,2.12-7,https://tracker.debian.org/pkg/grub2
+grub.uos,1,Uos,grub2,2.12-7deepin8,https://github.com/deepin-community/grub2
+grub.peimage,2,Canonical,grub2,2.12-7deepin8,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-use-peimage-shim.patch' > sbat
+  2> $ grub-mkimage -O arm64-efi -d ./arm64-efi/ -o grubaa64.efi.unsigned -p /EFI/boot --format 'arm64-efi' --compression  auto  ext2  part_gpt newc blocklist iso9660 udf memdisk cpio minicmd part_msdos part_gpt msdospart fat ntfs exfat loopback   gfxterm reboot normal romfs procfs sleep ls cat echo search configfile halt chain  test probe linux  scsi  gfxmenu gfxterm gfxterm_background deepin_gfxmode linux jpeg iso9660  elf   part_apple ext2 extcmd xfs part_bsd part_gpt search   search_fs_file chain btrfs loadenv lvm minix minix2 reiserfs png part_gpt gzio  part_gpt all_video efifwsetup password_pbkdf2 peimage --sbat sbat
 
 3. efi sign:
   Contact uos System Security.
