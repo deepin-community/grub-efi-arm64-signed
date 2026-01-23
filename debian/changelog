@@ -1,4 +1,4 @@
-grub-efi-arm64-signed (1+2.12+7deepin8) unstable; urgency=medium
+grub-efi-arm64-signed (1.1+2.12+7deepin8) unstable; urgency=medium
 
   * update grubaa64.efi.signed
   * update the build param in README
